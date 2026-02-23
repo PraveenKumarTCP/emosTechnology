@@ -2,29 +2,29 @@ import Image from 'next/image';
 
 const Banner = () => {
     return (
-        <section className="relative h-[93vh] w-full bg-[#fcfcfc] flex flex-col justify-end overflow-hidden">
-            {/* Main Product Image - Full Width */}
-            <div className="absolute inset-0 z-0">
+        <section className="w-full bg-[#fcfcfc] flex flex-col lg:relative lg:h-[93vh] lg:justify-end overflow-hidden">
+            {/* Main Product Image - Full width on desktop, contained on mobile */}
+            <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:absolute lg:inset-0 lg:h-full z-0">
                 <Image
                     src="/images/home/bg-passion.jpg"
                     alt="EMOS Precision Instrument"
                     fill
-                    className="object-cover object-center"
+                    className="object-contain lg:object-cover object-bottom lg:object-center"
                     priority
                 />
             </div>
 
-            {/* Typography Overlay - Left Aligned */}
-            <div className="container mx-auto relative z-10 pb-20 px-4 md:px-8">
-                <div className="max-w-xl">
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-[0.9] tracking-tighter">
-                        Pure passion & <br /> attention to detail
+            {/* Typography Overlay */}
+            <div className="container mx-auto relative z-10 py-8 px-4 sm:px-6 lg:px-8 lg:pb-20 text-center lg:text-left">
+                <div className="max-w-xl mx-auto lg:mx-0">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-800 leading-[1.2] lg:leading-[0.9] tracking-tighter">
+                        Pure passion & <br className="hidden sm:block" /> attention to detail
                     </h2>
                 </div>
             </div>
 
-            {/* Subtle Gradient Bottom to ensure text pop */}
-            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-white/60 via-white/20 to-transparent pointer-events-none z-[1]"></div>
+            {/* Subtle Gradient Bottom to ensure text pop on desktop */}
+            <div className="hidden lg:block absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#fcfcfc] via-[#fcfcfc]/80 to-transparent pointer-events-none z-[1]"></div>
         </section>
     );
 };

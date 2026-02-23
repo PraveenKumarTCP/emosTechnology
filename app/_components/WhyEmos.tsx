@@ -19,7 +19,7 @@ const WhyEmos = () => {
 
     return (
         <section className="bg-primary py-20 text-white">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <p className="uppercase text-xs font-bold tracking-[0.2em] mb-4 opacity-80">Why EMOS?</p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -27,15 +27,15 @@ const WhyEmos = () => {
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8 md:gap-12">
                         <div className="flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold">1</span>
+                            <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold bg-white text-primary">1</span>
                             <span className="text-xs font-bold uppercase">Pioneer in the medical technology industry</span>
                         </div>
                         <div className="flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold">2</span>
+                            <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold bg-white text-primary">2</span>
                             <span className="text-xs font-bold uppercase">Specialist repair services</span>
                         </div>
                         <div className="flex items-center gap-3">
-                            <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold">3</span>
+                            <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold bg-white text-primary">3</span>
                             <span className="text-xs font-bold uppercase">Development & manufacturing of medical products "Made in Germany"</span>
                         </div>
                     </div>

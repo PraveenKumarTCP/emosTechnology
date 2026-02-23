@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
     return (
         <nav className={`w-full bg-white border-b border-gray-100 fixed top-0 left-0 z-50 transition-all duration-500 transform ${scrolled ? 'translate-y-0 opacity-100 shadow-md' : '-translate-y-full opacity-0'
             }`}>
-            <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center gap-2">
@@ -57,13 +58,13 @@ const Navbar = () => {
                     <Link href="/contact" className="text-md font-medium hover:text-primary transition-colors">Contact</Link>
                 </div>
 
-                {/* Right side info */}
-                <div className="flex items-center space-x-6">
+                {/* Right side info & Mobile Toggle */}
+                <div className="flex items-center space-x-4 sm:space-x-6">
                     <div className="hidden sm:flex flex-col text-right">
                         <span className="text-[10px] text-gray-500 uppercase">Call us (Email)</span>
                         <span className="text-md font-bold">+49 (0) 7346 929 176 - 0</span>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="hidden sm:flex items-center space-x-2">
                         {/* German Flag */}
                         <svg className="w-6 h-4 shadow-sm" viewBox="0 0 5 3">
                             <rect width="5" height="3" y="0" fill="#000" />
@@ -78,6 +79,59 @@ const Navbar = () => {
                             <path d="M30,0 L30,30 M0,15 L60,15" stroke="#FFF" strokeWidth="10" />
                             <path d="M30,0 L30,30 M0,15 L60,15" stroke="#C8102E" strokeWidth="6" />
                         </svg>
+                    </div>
+
+                    {/* Mobile menu button */}
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="lg:hidden inline-flex items-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                        aria-expanded={isOpen}
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        {/* Icon when menu is closed */}
+                        <svg className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        {/* Icon when menu is open */}
+                        <svg className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu Content */}
+            <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+                <div className="px-4 pt-2 pb-6 space-y-1 bg-white border-b border-gray-100 shadow-md">
+                    <Link href="/endoscopy" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Endoscopy</Link>
+                    <Link href="/products" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Products</Link>
+                    <Link href="/development" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Development</Link>
+                    <Link href="/repair" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Repair</Link>
+                    <Link href="/spare-parts" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Components & Spare Parts</Link>
+                    <Link href="/company" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Company</Link>
+                    <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Contact</Link>
+
+                    <div className="sm:hidden mt-4 pt-4 px-3 flex flex-col gap-4">
+                        <div className="flex flex-col">
+                            <span className="text-[10px] text-gray-500 uppercase">Call us (Email)</span>
+                            <span className="text-sm font-bold text-gray-800">+49 (0) 7346 929 176 - 0</span>
+                        </div>
+                        <div className="flex items-center space-x-4">
+                            {/* German Flag */}
+                            <svg className="w-8 h-5 shadow-sm" viewBox="0 0 5 3">
+                                <rect width="5" height="3" y="0" fill="#000" />
+                                <rect width="5" height="2" y="1" fill="#D00" />
+                                <rect width="5" height="1" y="2" fill="#FFCE00" />
+                            </svg>
+                            {/* English Flag */}
+                            <svg className="w-8 h-5 shadow-sm" viewBox="0 0 60 30">
+                                <rect width="60" height="30" fill="#012169" />
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFF" strokeWidth="6" />
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" strokeWidth="4" />
+                                <path d="M30,0 L30,30 M0,15 L60,15" stroke="#FFF" strokeWidth="10" />
+                                <path d="M30,0 L30,30 M0,15 L60,15" stroke="#C8102E" strokeWidth="6" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
