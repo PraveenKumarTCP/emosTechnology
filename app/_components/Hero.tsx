@@ -32,10 +32,17 @@ export default function Hero() {
 
             {/* Centered Content Overlay (Responsive) */}
             <div className="relative z-10 text-center text-white px-4 max-w-5xl backdrop-blur-[2px] py-6 rounded-xl">
-                <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold mb-4 tracking-tight animate-fade-in shadow-black/50 text-shadow-sm">
+                <h1
+                    data-aos="fade-up"
+                    className="text-3xl md:text-5xl lg:text-5xl font-bold mb-4 tracking-tight animate-fade-in shadow-black/50 text-shadow-sm"
+                >
                     Precision Technology for Modern Medicine
                 </h1>
-                <p className="text-sm md:text-base lg:text-lg text-gray-200 font-medium max-w-2xl mx-auto leading-relaxed opacity-90 drop-shadow-md">
+                <p
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    className="text-sm md:text-base lg:text-lg text-gray-200 font-medium max-w-2xl mx-auto leading-relaxed opacity-90 drop-shadow-md"
+                >
                     German-engineered rigid and flexible endoscopes, accessories, and components <br className="hidden md:block" />
                     for diverse clinical applications.
                 </p>

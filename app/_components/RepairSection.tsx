@@ -7,7 +7,7 @@ const RepairSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
 
                     {/* Left Block: About EMOS */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col" data-aos="fade-right">
                         <div className="relative h-96 w-full mb-8 rounded-lg overflow-hidden group">
                             <Image
                                 src="/images/home/repair-1.jpg"
@@ -27,7 +27,7 @@ const RepairSection = () => {
                             <p className="text-gray-600 text-sm leading-relaxed mb-8">
                                 EMOS Technology GmbH is a globally operating manufacturer and service company.
                                 With passion and attention to detail, our team has been developing and producing high-quality endoscopic
-                                MADE IN GERMANY since 2003. Based on our company's founding.
+                                MADE IN GERMANY since 2003. Based on our company&apos;s founding.
                             </p>
                             <button className="bg-primary text-white flex items-center gap-4 px-6 py-3 text-xs font-bold hover:bg-primary-dark transition-all rounded-sm uppercase tracking-widest">
                                 Learn More <span>›</span>
@@ -36,7 +36,7 @@ const RepairSection = () => {
                     </div>
 
                     {/* Right Block: Repair Service */}
-                    <div className="flex flex-col md:flex-col-reverse">
+                    <div className="flex flex-col md:flex-col-reverse" data-aos="fade-left">
                         <div className="relative h-96 w-full mb-8 md:mb-0 md:mt-8 rounded-lg overflow-hidden group">
                             <Image
                                 src="/images/home/repair-2.jpg"

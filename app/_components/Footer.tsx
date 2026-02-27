@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-dark text-white pt-10 pb-5">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Newsletter Section */}
-                <div className="flex flex-col items-center mb-10 text-center">
+                <div className="flex flex-col items-center mb-10 text-center" data-aos="fade-down">
                     <h3 className="text-xl md:text-2xl font-medium mb-8 text-white/90">
                         Subscribe for the daily updates
                     </h3>
@@ -24,7 +24,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/10 pt-16 grid grid-cols-1 md:grid-cols-4 gap-x-12 gap-y-12 mb-16 px-4">
                     {/* Logo and Description */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col" data-aos="fade-up" data-aos-delay="100">
                         <div className="mb-6 flex flex-col">
                             {/* <span className="text-4xl font-bold text-white tracking-tighter leading-none">emos</span>
                             <span className="text-xl font-light text-white uppercase tracking-widest mt-1">technology</span> */}
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="200">
                         <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
                         <ul className="space-y-4 text-sm text-white/70">
                             <li><Link href="/development" className="hover:text-primary transition-colors">Development</Link></li>
@@ -65,7 +65,7 @@ const Footer = () => {
                     </div>
 
                     {/* Contact Info */}
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="300">
                         <h4 className="text-lg font-bold mb-6 text-white">Contact Info</h4>
                         <ul className="space-y-4 text-sm text-white/70">
                             <li className="flex items-start">
@@ -80,7 +80,7 @@ const Footer = () => {
                     </div>
 
                     {/* Translations */}
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="400">
                         <h4 className="text-lg font-bold mb-6 text-white">Translations</h4>
                         <div className="flex items-center gap-4">
                             {/* German Flag */}

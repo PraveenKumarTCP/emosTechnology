@@ -5,8 +5,8 @@ import Footer from "@/app/_components/Footer";
 export default function NotFound() {
     return (
         <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-1 flex items-center justify-center py-20 bg-gray-50">
+            <Navbar isHome={false} />
+            <main className="flex-1 flex items-center justify-center pt-32 pb-20 bg-gray-50">
                 <div className="container mx-auto px-4 text-center">
                     <div className="mb-8">
                         <h1 className="text-9xl font-bold text-primary/20 leading-none">404</h1>
@@ -17,7 +17,7 @@ export default function NotFound() {
                     </div>
 
                     <p className="text-gray-600 max-w-md mx-auto mb-10 text-lg italic">
-                        "Precision is at our core, but it seems we couldn't find the exact page you were looking for."
+                        &quot;Precision is at our core, but it seems we couldn&apos;t find the exact page you were looking for.&quot;
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

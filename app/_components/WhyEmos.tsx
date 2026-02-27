@@ -18,9 +18,9 @@ const WhyEmos = () => {
     ];
 
     return (
-        <section className="bg-primary py-20 text-white">
+        <section className="bg-primary py-20 text-white overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16" data-aos="fade-down">
                     <p className="uppercase text-xs font-bold tracking-[0.2em] mb-4 opacity-80">Why EMOS?</p>
                     <h2 className="text-3xl md:text-4xl font-bold mb-8">
                         High quality endoscopes for medicine & industry
@@ -36,14 +36,19 @@ const WhyEmos = () => {
                         </div>
                         <div className="flex items-center gap-3">
                             <span className="w-8 h-8 rounded-full border border-white flex items-center justify-center text-xs font-bold bg-white text-primary">3</span>
-                            <span className="text-xs font-bold uppercase">Development & manufacturing of medical products "Made in Germany"</span>
+                            <span className="text-xs font-bold uppercase">Development &amp; manufacturing of medical products &quot;Made in Germany&quot;</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 max-w-5xl mx-auto">
                     {points.map((point, index) => (
-                        <div key={index} className="bg-white/10 backdrop-blur-sm p-10 flex flex-col md:flex-row gap-8 border border-white/20 hover:bg-white/15 transition-all">
+                        <div
+                            key={index}
+                            className="bg-white/10 backdrop-blur-sm p-10 flex flex-col md:flex-row gap-8 border border-white/20 hover:bg-white/15 transition-all"
+                            data-aos="fade-left"
+                            data-aos-delay={index * 150}
+                        >
                             <div className="text-7xl font-bold opacity-50 shrink-0 leading-none">{point.number}</div>
                             <div className="flex-1">
                                 <h4 className="text-xl font-bold mb-4">{point.title}</h4>
