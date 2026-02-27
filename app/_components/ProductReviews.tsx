@@ -54,10 +54,10 @@ const ProductReviews = () => {
                                 <div className="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-[#86B817] rounded-full transition-all duration-1000"
-                                        style={{ width: `${rating === 5 ? 95 : rating === 4 ? 90 : rating === 3 ? 0 : rating === 2 ? 0 : 0}%` }}
+                                        style={{ width: `${rating === 5 ? 90 : rating === 4 ? 10 : rating === 3 ? 0 : rating === 2 ? 0 : 0}%` }}
                                     ></div>
                                 </div>
-                                <span className="text-xs text-gray-400 w-16">{rating === 5 ? '28k' : rating === 4 ? '4k' : rating === 3 ? '1k' : rating === 2 ? '200' : '0'} reviews</span>
+                                {/* <span className="text-xs text-gray-400 w-16">{rating === 5 ? '28k' : rating === 4 ? '4k' : rating === 3 ? '1k' : rating === 2 ? '200' : '0'} reviews</span> */}
                             </div>
                         ))}
                     </div>
