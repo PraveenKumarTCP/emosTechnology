@@ -5,6 +5,17 @@ const Banner = () => {
         <section className="w-full bg-[#fcfcfc] flex flex-col lg:relative lg:h-[93vh] lg:justify-end overflow-hidden">
             {/* Main Product Image - Full width on desktop, contained on mobile */}
             <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:absolute lg:inset-0 lg:h-full z-0" data-aos="zoom-in" data-aos-duration="1000">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                >
+                    <source src="https://cdn.clinicalvisuals.com/medical/emos/shortclips/emos_04.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                </video>
+                {/* 
                 <Image
                     src="/images/home/bg-passion.jpg"
                     alt="EMOS Precision Instrument"
@@ -12,6 +23,7 @@ const Banner = () => {
                     className="object-contain lg:object-cover object-bottom lg:object-center"
                     priority
                 />
+                */}
             </div>
 
             {/* Typography Overlay */}

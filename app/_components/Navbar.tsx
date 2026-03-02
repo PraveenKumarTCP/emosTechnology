@@ -107,7 +107,7 @@ const Navbar = ({ isHome = true }: { isHome?: boolean }) => {
             <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="px-4 pt-2 pb-6 space-y-1 bg-white border-b border-gray-100 shadow-md">
                     <Link href="/endoscopy" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Endoscopy</Link>
-                    <Link href="/products" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Products</Link>
+                    <Link href="/category/human" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Products</Link>
                     <Link href="/development" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Development</Link>
                     <Link href="/repair" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Repair</Link>
                     <Link href="/spare-parts" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-800 hover:text-primary hover:bg-gray-50 border-b border-gray-50">Components & Spare Parts</Link>
